@@ -16,10 +16,52 @@ directionEl.innerText = `The Key you pressed is ${event.key}`;
 
 
 // Access the button element with id "clickMe"
-const button = document.getElementById("clickMe");
+const clickMebutton = document.getElementById("clickMe");
 
 // Add an event listener for "click" event
-button.addEventListener("click", function() {
+clickMebutton.addEventListener("click", function() {
     // Change the button text when clicked
-    button.innerText = "You clicked me!";
+    clickMebutton.innerText = "You clicked me!";
 });
+
+
+
+// Function to generate a random color
+function getRandomColor() {
+    const randomColor = `rgb(${Math.floor(Math.random() * 256)}, 
+                             ${Math.floor(Math.random() * 256)}, 
+                             ${Math.floor(Math.random() * 256)})`;
+    return randomColor;
+}
+
+// Function to change the background color
+function changeBackgroundColor() {
+    document.body.style.backgroundColor = getRandomColor();
+}
+
+// Attach the event listener to the button
+document.getElementById("randomColorBtn").addEventListener("click", changeBackgroundColor);
+
+function changeBtnStyle() {
+    const btn = document.querySelector(".cool-btn")
+    btn.classList.toggle("glow"); // Toggles glow effect
+    }
+
+
+
+
+// dark mode
+    let darkModebutton = document.getElementById("darkModeBtn");
+    let isDarkMode = false;
+    darkModebutton.addEventListener("click", ()=> {
+    if(isDarkMode) {
+    document.body.classList.remove("dark");
+    darkModebutton.textContent="Dark Mode";
+    isDarkMode = false;
+    }
+    else{
+    document.body.classList.add("dark");
+    darkModebutton.textContent = "Light Mode";
+    isDarkMode = true;
+    }
+    })

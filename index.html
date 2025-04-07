@@ -12,6 +12,32 @@
 <!-- For Document Events -->
 <p id="onload"></p>
 <button id="clickMe">Click me for something To happen</button>
+
+<button id="randomColorBtn">Change Background Color</button>
+
+<style>
+    .cool-btn {
+    background: linear-gradient(45deg, #ff6b6b, #556270);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    }
+    .glow {
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.8);
+    }
+    </style>
+    <button class="cool-btn" onclick="changeBtnStyle()">Click me to change my style</button>
+    <style>
+        .dark {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+    <button id="darkModeBtn">Dark Mode</button>
 <script src="script.js"></script>
 </body>
 </html>
